@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="parking_detector_node" pkg="parking_detector" type="parking_detector_node.py" output="screen">
+        <remap from="parking_lot" to="/move_base_simple/goal" />
+    </node>
+</launch>

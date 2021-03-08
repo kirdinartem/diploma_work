@@ -3,11 +3,12 @@
 <launch>
   <arg name="x" default="0" />
   <arg name="y" default="0" />
-  <arg name="initial_pose" default="-x $(arg x) -y $(arg y) -z 0.5 -R 0 -P 0 -Y 1.57" />
+  <arg name="yaw" default="0" />
+  <arg name="initial_pose" default="-x $(arg x) -y $(arg y) -z 0.5 -R 0 -P 0 -Y 0" />
   <arg name="world_name" default="RFMaze.v2.world" />
-  <arg name="gz_gui" default="false" />
+  <arg name="gz_gui" default="true" />
   <arg name="urdf_file" default="$(find wr8_description)/urdf/model.urdf.xacro" />
-  <arg name="enable_stereo" default="false" />
+  <arg name="enable_stereo" default="true" />
 
   <!-- Set environment variable that contains robot model description -->
   <param name="robot_description" command="$(find xacro)/xacro '$(arg urdf_file)' enable_stereo:=$(arg enable_stereo)" />

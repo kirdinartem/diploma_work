@@ -2,7 +2,7 @@
 <!-- Run simulation for solve problem of localization -->
 <launch>
   <arg name="wp_global_planner" default="true" doc="[true - wp_global_planner, false - global_planner]"/>
-  <arg name="enable_stereo" default="false" />
+  <arg name="enable_stereo" default="true" />
 
   <include file="$(find wr8_description)/launch/gazebo.launch">
     <arg name="enable_stereo" value="$(arg enable_stereo)" />
@@ -20,4 +20,11 @@
       <arg name="target_frame" value="stereo_camera_optical_frame" />
     </include>
   </group>
+
+  <!--include file="$(find wr8_software)/launch/base/my_camera.launch"/-->
+
+  <!--node name="parking_goal_action_client" pkg="parking_detector" type="parking_goal_action_client.py" output="screen"/-->
+
+  <!--node name="move_forward" pkg="parking_detector" type="move_forward.py" output="screen"/-->
+
 </launch>

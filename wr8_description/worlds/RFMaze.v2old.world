@@ -8,13 +8,13 @@
       </camera>
     </gui>
     <include>
-      <uri>model://my_ground_plane</uri>
+      <uri>model://ground_plane</uri>
     </include>
     <include>
       <uri>model://sun</uri>
     </include>
     <include>
-      <uri>model://RFMaze.v3</uri>
+      <uri>model://RFMaze.v2</uri>
     </include>
   </world>
 </sdf>
